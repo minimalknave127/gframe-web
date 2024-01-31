@@ -1,0 +1,39 @@
+<svg width="252" height="252" viewBox="0 0 252 252" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_186_6271)">
+<rect width="252" height="252" fill="white"/>
+<mask id="mask0_186_6271" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="255" height="254">
+<ellipse cx="127.038" cy="126.692" rx="127.038" ry="126.692" fill="url(#paint0_radial_186_6271)"/>
+</mask>
+<g mask="url(#mask0_186_6271)">
+<mask id="mask1_186_6271" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="252" height="252">
+<path d="M0 0.000732422H251.999V252H0V0.000732422Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_186_6271)">
+<path d="M244.616 126C244.616 191.511 191.51 244.617 126 244.617C60.4892 244.617 7.38281 191.511 7.38281 126C7.38281 60.4899 60.4892 7.38353 126 7.38353C191.51 7.38353 244.616 60.4899 244.616 126Z" stroke="#1F1F1F" stroke-width="2.01462" stroke-miterlimit="10"/>
+<path d="M190.234 126C190.234 191.511 161.475 244.617 126 244.617C90.5245 244.617 61.7661 191.511 61.7661 126C61.7661 60.4899 90.5245 7.38353 126 7.38353C161.475 7.38353 190.234 60.4899 190.234 126Z" stroke="#1F1F1F" stroke-width="2.01462" stroke-miterlimit="10"/>
+<path d="M126 7.38402V244.618" stroke="#1F1F1F" stroke-width="2.01462" stroke-miterlimit="10"/>
+<path d="M244.617 126.001H7.3833" stroke="#1F1F1F" stroke-width="2.01462" stroke-miterlimit="10"/>
+<path d="M216.383 49.1832C194.626 63.0319 162.207 71.8169 126 71.8169C89.7921 71.8169 57.3738 63.0319 35.6162 49.1827" stroke="#1F1F1F" stroke-width="2.01462" stroke-miterlimit="10"/>
+<path d="M35.6162 202.817C57.3738 188.969 89.7921 180.184 126 180.184C162.207 180.184 194.626 188.969 216.383 202.818" stroke="#1F1F1F" stroke-width="2.01462" stroke-miterlimit="10"/>
+</g>
+</g>
+<circle cx="64.3848" cy="91.3848" r="16.9615" fill="#F2F2F2" stroke="#B7B7B7" stroke-width="0.692308"/>
+<path d="M64.3849 92.0774C66.2966 92.0774 67.8464 90.5276 67.8464 88.6158C67.8464 86.7041 66.2966 85.1543 64.3849 85.1543C62.4731 85.1543 60.9233 86.7041 60.9233 88.6158C60.9233 90.5276 62.4731 92.0774 64.3849 92.0774Z" stroke="black" stroke-width="1.38462" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M69.9236 97.6156C69.9236 96.1467 69.3401 94.738 68.3014 93.6993C67.2628 92.6607 65.854 92.0771 64.3851 92.0771C62.9162 92.0771 61.5075 92.6607 60.4689 93.6993C59.4302 94.738 58.8467 96.1467 58.8467 97.6156" stroke="black" stroke-width="1.38462" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="189.692" cy="126" r="16.9615" fill="#F2F2F2" stroke="#B7B7B7" stroke-width="0.692308"/>
+<path d="M189.692 126.693C191.604 126.693 193.154 125.143 193.154 123.231C193.154 121.319 191.604 119.77 189.692 119.77C187.781 119.77 186.231 121.319 186.231 123.231C186.231 125.143 187.781 126.693 189.692 126.693Z" stroke="black" stroke-width="1.38462" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M195.231 132.231C195.231 130.762 194.647 129.353 193.609 128.315C192.57 127.276 191.161 126.692 189.692 126.692C188.223 126.692 186.815 127.276 185.776 128.315C184.737 129.353 184.154 130.762 184.154 132.231" stroke="black" stroke-width="1.38462" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="127.385" cy="182.769" r="16.9615" fill="#F2F2F2" stroke="#B7B7B7" stroke-width="0.692308"/>
+<path d="M127.385 183.462C129.297 183.462 130.846 181.912 130.846 180.001C130.846 178.089 129.297 176.539 127.385 176.539C125.473 176.539 123.923 178.089 123.923 180.001C123.923 181.912 125.473 183.462 127.385 183.462Z" stroke="black" stroke-width="1.38462" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M132.924 189C132.924 187.531 132.34 186.123 131.301 185.084C130.263 184.045 128.854 183.462 127.385 183.462C125.916 183.462 124.508 184.045 123.469 185.084C122.43 186.123 121.847 187.531 121.847 189" stroke="black" stroke-width="1.38462" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_186_6271" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(127.038 126.692) rotate(90) scale(126.692 127.038)">
+<stop offset="0.275"/>
+<stop offset="1" stop-opacity="0"/>
+</radialGradient>
+<clipPath id="clip0_186_6271">
+<rect width="252" height="252" fill="white"/>
+</clipPath>
+</defs>
+</svg>
