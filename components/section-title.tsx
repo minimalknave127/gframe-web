@@ -21,7 +21,7 @@ export default function SectionTitle({
     >
       <h2
         className={cn([
-          "md:text-5xl text-2xl font-bold mb-5 md:mb-0 md:flex-1",
+          "md:text-5xl text-2xl font-bold mb-5 md:mb-0 md:flex-1 max-w-md xl:leading-tight xl:tracking-tighter",
           vertical && "md:mb-10",
           center && "text-center",
         ])}

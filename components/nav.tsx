@@ -67,7 +67,7 @@ export default function Nav() {
           scrolled && "border-b",
         ])}
       >
-        <div className="flex items-center gap-5">
+        <div className="hidden xl:flex items-center gap-5">
           <Link href="/">
             <motion.div
               initial={{ width: 60, height: 50 }}

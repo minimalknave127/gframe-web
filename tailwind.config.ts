@@ -22,8 +22,8 @@ const config = {
         "3.5xl": "2rem",
       },
       fontFamily: {
-        poppins: "var(--font-poppins)",
-        silka: "var(--font-silka)",
+        dmsans: "var(--font-dm-sans)",
+        inter: "var(--font-inter)",
       },
       colors: {
         border: "hsl(var(--border))",

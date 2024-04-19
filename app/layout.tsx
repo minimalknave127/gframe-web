@@ -1,37 +1,21 @@
 //? app layout
 
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { DM_Sans, Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Nav from "@/components/nav";
 import Footer from "@/components/footer";
 
-const poppins = Poppins({
+const inter = Inter({
   weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-poppins",
+  variable: "--font-inter",
   subsets: ["latin"],
 });
-
-const silka = localFont({
-  src: [
-    {
-      path: "../fonts/silka-bold-webfont.ttf",
-      style: "normal",
-      weight: "700",
-    },
-    {
-      path: "../fonts/silka-medium-webfont.ttf",
-      style: "normal",
-      weight: "500",
-    },
-    {
-      path: "../fonts/silka-light-webfont.ttf",
-      style: "normal",
-      weight: "300",
-    },
-  ],
-  variable: "--font-silka",
+const dmSans = DM_Sans({
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-dm-sans",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -46,8 +30,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${silka.variable} ${poppins.variable}`}>
-        <Nav />
+      <body className={`${inter.variable} ${dmSans.variable}`}>
+        {/* <Nav /> */}
         {children}
         <Footer />
       </body>

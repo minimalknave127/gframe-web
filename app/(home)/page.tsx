@@ -7,56 +7,17 @@ import FunctionCard from "@/components/function-card";
 import SectionTitle from "@/components/section-title";
 import HomeTabs from "./components/home-tabs";
 import Link from "next/link";
+import HomeHeader from "./components/home-header";
+import FunctionCard2 from "./components/home-card";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <header>
-        <Container className="flex flex-col gap-10 items-center">
-          <div className="bg-gradient-to-r rounded-full from-[#EA5753] to-[#FFB88E]">
-            <span className="bg-white block rounded-full  m-[1px] p-2">
-              <h6 className="font-medium md:text-sm text-xs">
-                🎉 První modulový systém
-              </h6>
-            </span>
-          </div>
-          <div>
-            <h1 className="md:text-7xl text-3xl font-bold text-center mb-5">
-              Vaše firma na cloudu
-            </h1>
-            <p className="md:text-xl text-base text-center">
-              Sestavte si během pár minut vlastní systém a řiďte svojí firmu
-              moderně, přehledně a rychle.
-            </p>
-          </div>
-          <div className="flex flex-col md:flex-row items-center w-full gap-3 justify-center">
-            <Button asChild className="md:w-auto w-full" size="lg">
-              <Link target="_blank" href="https://www.gframe.app">
-                Začít zdarma
-              </Link>
-            </Button>
-            <Button variant="ghost" size="lg" className="md:w-auto w-full">
-              Jak to funguje <ChevronRight className="ms-3" />
-            </Button>
-          </div>
-        </Container>
-      </header>
+      <HomeHeader />
 
-      <Container>
-        <Image
-          height={630}
-          width={1216}
-          src="/hero.png"
-          className="object-contain mt-20 !w-full shadow-2xl rounded-xl max-w-full border"
-          alt="Application preview"
-        />
-      </Container>
       <Section>
         <Container className="flex flex-col items-center">
-          <SectionTitle
-            title="Chytré propojení"
-            description="Gframe funguje na bázi modulů, které si můžete kdykoliv aktivovat a navzájem kombinovat. Díky tomu si můžete systém nastavit přesně sobě na míru."
-          />
+          <SectionTitle title="Co vám můžeme nabídnout?" center vertical />
           {/* <div className="flex flex-col md:flex-row mb-20">
             <h2 className="md:text-5xl text-3.5xl font-bold mb-5 md:flex-1">
               Chytré propojení
@@ -68,12 +29,8 @@ export default function Home() {
             </p>
           </div> */}
           <div className="flex w-full gap-8 flex-col md:flex-row">
-            <FunctionCard
-              className="flex-1"
-              title="Všechny moduly jsou propojené"
-              content="/svg/connected-modules.svg"
-            />
-            <FunctionCard
+            <FunctionCard2 />
+            {/* <FunctionCard
               className="flex-1"
               title="Dostupnost kdekoliv a kdykoliv"
               content="/svg/globe.svg"
@@ -82,7 +39,7 @@ export default function Home() {
               className="flex-1"
               title="Intuitivní jednoduché ovládání"
               content="/svg/intuitivity.svg"
-            />
+            /> */}
           </div>
         </Container>
       </Section>
