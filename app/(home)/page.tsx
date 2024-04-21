@@ -9,6 +9,8 @@ import HomeTabs from "./components/home-tabs";
 import Link from "next/link";
 import HomeHeader from "./components/home-header";
 import FunctionCard2 from "./components/home-card";
+import ConnectSvg from "../svg/connect";
+import MessageSvg from "../svg/message";
 
 export default function Home() {
   return (
@@ -29,7 +31,26 @@ export default function Home() {
             </p>
           </div> */}
           <div className="flex w-full gap-8 flex-col md:flex-row">
-            <FunctionCard2 />
+            <FunctionCard2
+              title="Propojené aplikace"
+              description="Aplikace s různými účely spolu chytře komunikují"
+              // image="/svg/home/connect.svg"
+              ImageComponent={ConnectSvg}
+              className="flex-1"
+            />
+            <FunctionCard2
+              title="Připojení odkudkoliv"
+              description="Aplikace s různými účely spolu chytře komunikují"
+              image="/svg/home/wifi.svg"
+              className="from-red-50 flex-1"
+            />
+            <FunctionCard2
+              title="Jednoduché rozhraní"
+              description="Naučit se s naším systémem je hračka pro každého"
+              // image="/svg/home/message.svg
+              className="flex-1"
+              ImageComponent={MessageSvg}
+            />
             {/* <FunctionCard
               className="flex-1"
               title="Dostupnost kdekoliv a kdykoliv"

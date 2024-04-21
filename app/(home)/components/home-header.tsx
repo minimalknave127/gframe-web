@@ -33,19 +33,20 @@ export default function HomeHeader() {
 
   useEffect(() => {
     let direction = 1;
-    const interval = setInterval(init, 2500);
     function init() {
       setCurrentIndex((prev) => {
         const next = prev + direction;
         console.log(prev, next);
-        if (next >= content.length) {
+        if (next >= content.length - 1) {
           direction = -1;
-        } else if (next < 0) {
+        } else if (next <= 0) {
           direction = 1;
         }
-        return next >= content.length ? 0 : next;
+        return next;
+        // return next >= content.length ? 0 : next;
       });
     }
+    const interval = setInterval(init, 2500);
     return () => clearInterval(interval);
   }, []);
 
