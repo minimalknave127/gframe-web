@@ -75,7 +75,16 @@ export default function HomeHeader() {
                 className="text-primary -changing-text block"
               >
                 {content.slice(1).map((item, index) => (
-                  <span
+                  <motion.span
+                    animate={{
+                      opacity: currentIndex - 1 === index ? 1 : 0,
+                    }}
+                    transition={{
+                      repeatDelay: 1,
+                      duration: 1.5,
+                      repeatType: "mirror",
+                      ease: "anticipate",
+                    }}
                     key={index}
                     className="absolute flex items-center"
                     style={{
@@ -93,9 +102,22 @@ export default function HomeHeader() {
                         height={80}
                       />
                     )} */}
-                  </span>
+                  </motion.span>
                 ))}
-                {content[0].title}
+                <motion.span
+                  transition={{
+                    repeatDelay: 1,
+                    duration: 1.5,
+                    repeatType: "mirror",
+                    ease: "anticipate",
+                  }}
+                  initial={{ opacity: 1 }}
+                  animate={{
+                    opacity: currentIndex === 0 ? 1 : 0,
+                  }}
+                >
+                  {content[0].title}
+                </motion.span>
               </motion.span>
             </span>
             {/* <br /> */}

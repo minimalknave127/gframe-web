@@ -25,7 +25,7 @@ export default function FunctionCard({
       whileHover="play"
       style={{ transition: "all 3s ease-in-out" }}
       className={cn([
-        "p-5 py-10 border border-slate-100 rounded-lg to-[60%] bg-gradient-to-br from-slate-50 hover:from-slate-100  relative overflow-hidden",
+        "p-5 py-10 border border-slate-100 rounded-lg to-[60%] bg-gradient-to-br from-slate-50  relative overflow-hidden",
         className,
       ])}
     >

@@ -11,6 +11,7 @@ import HomeHeader from "./components/home-header";
 import FunctionCard2 from "./components/home-card";
 import ConnectSvg from "../svg/connect";
 import MessageSvg from "../svg/message";
+import FeatureTabs from "./components/feature-tabs";
 
 export default function Home() {
   return (
@@ -70,9 +71,8 @@ export default function Home() {
             vertical
             center
             title="Vše co potřebujete na jednom místě"
-            description="Přizpůsobte si systém GFrame na míru svému podnikání."
           />
-          <HomeTabs />
+          <FeatureTabs />
         </Container>
       </Section>
       <Section>
