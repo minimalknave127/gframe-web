@@ -15,7 +15,14 @@ import {
 import { usePathname, useRouter } from "next/navigation";
 import { Button } from "./ui/button";
 
-const navItems = [
+type NavItem = {
+  name: string;
+  href: string;
+  exact?: boolean;
+  items?: { name: string; icon?: string; href: string }[];
+};
+
+const navItems: NavItem[] = [
   {
     name: "Domů",
     href: "/",
