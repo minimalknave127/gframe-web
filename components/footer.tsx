@@ -16,7 +16,7 @@ export default function Footer() {
           </h2>
 
           <Button asChild size="lg">
-            <Link href="https://app.gframe.app/auth/register ">
+            <Link href="https://app.gframe.app/auth/register">
               Registrovat se zdarma
             </Link>
           </Button>
