@@ -1,64 +1,65 @@
-import Image from "next/image";
+"use client";
+import FlakeIcon from "@/app/svg/flake";
 import { Container } from "./container";
 import { Button } from "./ui/button";
 import { UnderlineText } from "./underline-text";
-import Logo from "@/assets/logo";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-slate-950 text-white py-20 rounded-t-3xl">
-      <Container className="flex flex-col gap-5 md:gap-10">
-        <h1 className="md:text-5xl text-2xl font-semibold md:flex-1 text-center">
-          Začněte ješte dnes <UnderlineText>zdarma</UnderlineText>
-        </h1>
-        <p className="text-center md:text-xl text-base ">
-          Získejte kontrolu nad firemními procesy ještě dnes.
-        </p>
-        <Button
-          className="mx-auto text-black bg-slate-200 hover:bg-slate-300"
-          size="lg"
-        >
-          Začít zdarma
-        </Button>
-        <div className="relative my-10 md:my-16 after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-t from-slate-950 to-transparent">
-          <Image
-            src="/hero.png"
-            alt="Gframe dashboard"
-            className="w-full"
-            height={630}
-            width={1216}
-          />
+    <footer className="mt-[102px] md:mt-[172px] w-full">
+      <div className="px-4">
+        <div className="w-full flex flex-col overflow-hidden justify-center items-center md:py-20 py-10 rounded-2xl relative  md:pb-0 pb-[50vw] md:min-h-[80vh] after:content-[''] after:rounded-2xl after:absolute after:top-0 after:bottom-0 after:right-0 after:left-0  after:bg-slate-100 after:-z-10 ">
+          <h2 className="md:text-5xl text-2xl font-bold mb-5 xl:max-w-xl md:max-w-2xl max-w-max xl:leading-tight xl:tracking-tighter md:mb-10 text-center">
+            Přidejte se k rostoucí komunitě a automatizujte ještě dnes
+          </h2>
+
+          <Button asChild size="lg">
+            <Link href="https://app.gframe.app/auth/register ">
+              Registrovat se zdarma
+            </Link>
+          </Button>
+          <div className="absolute md:block hidden top-0 left-0 xl:-translate-x-1/3 xl:-translate-y-1/3 md:-translate-x-1/2 md:-translate-y-1/2">
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+            >
+              <FlakeIcon className="text-primary xl:w-[548px] md:w-[450px]" />
+            </motion.div>
+          </div>
+          <div className="absolute bottom-0 md:right-0 md:left-auto right-auto left-1/2 xl:translate-x-1/3 xl:translate-y-1/3 md:translate-x-1/2 md:translate-y-1/2 -translate-x-1/2 translate-y-[60%]">
+            {/* <div className="absolute md:block   right-0 bottom-0 xl:translate-x-1/3 xl:translate-y-1/3 md:translate-x-1/2 md:translate-y-1/2 -translate-x-1/2  "> */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+            >
+              <FlakeIcon className="text-primary xl:w-[548px] md:w-[450px] w-screen" />
+            </motion.div>
+          </div>
         </div>
-      </Container>
-      <Container className="flex justify-between flex-col md:flex-row mt-5">
-        <div>
-          <Logo />
-        </div>
-        <div className="flex md:gap-20 gap-10 flex-col md:flex-row mt-10 md:mt-0">
-          <ul className="flex flex-col gap-2">
-            <li className="font-semibold mb-1">Navigace</li>
+      </div>
+      <Container className="mt-10 mb-10 flex justify-between">
+        <div>logo</div>
+        <div className="flex gap-52">
+          <ul className="font-dmsans font-medium">
+            <li className="font-bold">Navigace</li>
             <li>
-              <Link href="/">Řešení</Link>
+              <Link href="/">Domů</Link>
             </li>
-            <li>Přihlášení</li>
-            <li>Kontakt</li>
+            {/* <li>Aplikace</li>
+            <li>Blog</li>
+            <li>Kontakt</li> */}
           </ul>
-          <ul className="flex flex-col gap-2">
-            <li className="font-semibold mb-1">Kontakt</li>
+          <ul className="font-dmsans font-medium">
+            <li className="font-bold">Kontakt</li>
             <li>
-              <Link href="/">
-                Pláničkova 443/5,
-                <br />
-                Praha 6 - Veleslavín
-              </Link>
+              Pláničkova 443/5
+              <br />
+              Praha 6 - Veleslavín
             </li>
-            <li>
-              <Link href="/">info@gframe.cz</Link>
-            </li>
-            <li>
-              <Link href="/">+420 739 478 299</Link>
-            </li>
+            <li>GLOB Software, s.r.o.</li>
+            <li>CZ10722530</li>
           </ul>
         </div>
       </Container>

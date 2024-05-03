@@ -26,7 +26,7 @@ export default function MessageSvg() {
           },
         }}
       >
-        <g id="Frame 5118" clip-path="url(#clip0_432_1415)">
+        <g id="Frame 5118" clipPath="url(#clip0_432_1415)">
           <mask
             id="mask0_432_1415"
             //   style="mask-type:alpha"
@@ -70,10 +70,10 @@ export default function MessageSvg() {
                       fill="black"
                       xmlSpace="preserve"
                       // style="white-space: pre"
-                      font-family="inherit"
-                      font-size="14"
-                      font-weight="bold"
-                      letter-spacing="-0.04em"
+                      fontFamily="inherit"
+                      fontSize="14"
+                      fontWeight="bold"
+                      letterSpacing="-0.04em"
                     >
                       <tspan x="116.396" y="86.0929">
                         {" "}
@@ -84,9 +84,9 @@ export default function MessageSvg() {
                       xmlSpace="preserve"
                       // style="white-space: pre"
                       fontFamily="inherit"
-                      font-size="14"
-                      font-weight="600"
-                      letter-spacing="-0.04em"
+                      fontSize="14"
+                      fontWeight="600"
+                      letterSpacing="-0.04em"
                     >
                       <tspan x="56.9595" y="86.0929">
                         John Doe
@@ -96,11 +96,11 @@ export default function MessageSvg() {
                       fill="#64748B"
                       xmlSpace="preserve"
                       // style="white-space: pre"
-                      // font-family="inherit"
+                      // fontFamily="inherit"
                       className="font-inter"
-                      font-size="14"
-                      font-weight="500"
-                      letter-spacing="-0.04em"
+                      fontSize="14"
+                      fontWeight="500"
+                      letterSpacing="-0.04em"
                     >
                       <tspan x="119.076" y="86.0929">
                         p&#x159;idal koment&#xe1;&#x159;
@@ -112,9 +112,9 @@ export default function MessageSvg() {
                     fill="#334155"
                     xmlSpace="preserve"
                     //   style="white-space: pre"
-                    font-family="inherit"
-                    font-size="14"
-                    letter-spacing="-0.04em"
+                    fontFamily="inherit"
+                    fontSize="14"
+                    letterSpacing="-0.04em"
                   >
                     <tspan x="56.8287" y="113.093">
                       Super, d&#x11b;kuji za zpr&#xe1;vu! 👍
@@ -137,9 +137,9 @@ export default function MessageSvg() {
                     xmlSpace="preserve"
                     //   style="white-space: pre"
                     className="font-dmsans"
-                    font-size="14"
-                    font-weight="bold"
-                    letter-spacing="-0.04em"
+                    fontSize="14"
+                    fontWeight="bold"
+                    letterSpacing="-0.04em"
                   >
                     <tspan x="6.10303" y="90.6112">
                       M
@@ -170,9 +170,9 @@ export default function MessageSvg() {
             width="305"
             height="86"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -206,10 +206,10 @@ export default function MessageSvg() {
             y2="85.8371"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white" />
-            <stop offset="0.0848034" stop-color="white" />
-            <stop offset="0.615" stop-color="white" />
-            <stop offset="0.91" stop-color="white" stop-opacity="0" />
+            <stop stopColor="white" />
+            <stop offset="0.0848034" stopColor="white" />
+            <stop offset="0.615" stopColor="white" />
+            <stop offset="0.91" stopColor="white" stopOpacity="0" />
           </linearGradient>
           <clipPath id="clip0_432_1415">
             <rect
@@ -232,7 +232,7 @@ export default function MessageSvg() {
           },
         }}
       >
-        <g id="Frame 5118" clip-path="url(#clip0_432_1415)">
+        <g id="Frame 5118" clipPath="url(#clip0_432_1415)">
           <mask
             id="mask0_432_1415"
             //   style="mask-type:alpha"
@@ -276,10 +276,10 @@ export default function MessageSvg() {
                       fill="black"
                       xmlSpace="preserve"
                       // style="white-space: pre"
-                      font-family="inherit"
-                      font-size="14"
-                      font-weight="bold"
-                      letter-spacing="-0.04em"
+                      fontFamily="inherit"
+                      fontSize="14"
+                      fontWeight="bold"
+                      letterSpacing="-0.04em"
                     >
                       <tspan x="116.396" y="86.0929">
                         {" "}
@@ -290,9 +290,9 @@ export default function MessageSvg() {
                       xmlSpace="preserve"
                       // style="white-space: pre"
                       fontFamily="inherit"
-                      font-size="14"
-                      font-weight="600"
-                      letter-spacing="-0.04em"
+                      fontSize="14"
+                      fontWeight="600"
+                      letterSpacing="-0.04em"
                     >
                       <tspan x="56.9595" y="86.0929">
                         Petr Palk
@@ -302,11 +302,11 @@ export default function MessageSvg() {
                       fill="#64748B"
                       xmlSpace="preserve"
                       // style="white-space: pre"
-                      // font-family="inherit"
+                      // fontFamily="inherit"
                       className="font-inter"
-                      font-size="14"
-                      font-weight="500"
-                      letter-spacing="-0.04em"
+                      fontSize="14"
+                      fontWeight="500"
+                      letterSpacing="-0.04em"
                     >
                       <tspan x="119.076" y="86.0929">
                         p&#x159;idal koment&#xe1;&#x159;
@@ -318,9 +318,9 @@ export default function MessageSvg() {
                     fill="#334155"
                     xmlSpace="preserve"
                     //   style="white-space: pre"
-                    font-family="inherit"
-                    font-size="14"
-                    letter-spacing="-0.04em"
+                    fontFamily="inherit"
+                    fontSize="14"
+                    letterSpacing="-0.04em"
                   >
                     <tspan x="56.8287" y="113.093">
                       Není vůbec zač. 😀
@@ -343,9 +343,9 @@ export default function MessageSvg() {
                     xmlSpace="preserve"
                     //   style="white-space: pre"
                     className="font-dmsans"
-                    font-size="14"
-                    font-weight="bold"
-                    letter-spacing="-0.04em"
+                    fontSize="14"
+                    fontWeight="bold"
+                    letterSpacing="-0.04em"
                   >
                     <tspan x="8.30303" y="90.6112">
                       P
@@ -376,9 +376,9 @@ export default function MessageSvg() {
             width="305"
             height="86"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -412,10 +412,10 @@ export default function MessageSvg() {
             y2="85.8371"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white" />
-            <stop offset="0.0848034" stop-color="white" />
-            <stop offset="0.615" stop-color="white" />
-            <stop offset="0.91" stop-color="white" stop-opacity="0" />
+            <stop stopColor="white" />
+            <stop offset="0.0848034" stopColor="white" />
+            <stop offset="0.615" stopColor="white" />
+            <stop offset="0.91" stopColor="white" stopOpacity="0" />
           </linearGradient>
           <clipPath id="clip0_432_1415">
             <rect

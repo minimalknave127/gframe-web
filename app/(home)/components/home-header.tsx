@@ -9,6 +9,7 @@ import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import HomeRatingCard from "./home-rating-card";
+import Link from "next/link";
 
 const wait = (ms: number) => new Promise((res) => setTimeout(res, ms | 1000));
 
@@ -36,7 +37,6 @@ export default function HomeHeader() {
     function init() {
       setCurrentIndex((prev) => {
         const next = prev + direction;
-        console.log(prev, next);
         if (next >= content.length - 1) {
           direction = -1;
         } else if (next <= 0) {
@@ -127,8 +127,10 @@ export default function HomeHeader() {
             Kompletní správa vaší společnosti na cloudu.
           </h2>
           <div className="mt-8">
-            <Button size="lg" className="w-full xl:w-auto">
-              Začít využívat zdarma <ChevronRight className="ms-2" />
+            <Button asChild size="lg" className="w-full xl:w-auto">
+              <Link href="https://app.gframe.app/auth/register">
+                Začít využívat zdarma <ChevronRight className="ms-2" />
+              </Link>
             </Button>
             <Button
               size="lg"

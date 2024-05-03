@@ -37,13 +37,13 @@ export default function FeatureTabs() {
           />
         ))}
       </div>
-      <Button
+      {/* <Button
         variant="secondary"
         size="lg"
         className="mt-10 w-full md:w-auto mx-auto block"
       >
         Zobrazit všechny aplikace
-      </Button>
+      </Button> */}
     </div>
   );
 }

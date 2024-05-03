@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${dmSans.variable}`}>
-        {/* <Nav /> */}
+        <Nav />
         {children}
         <Footer />
       </body>

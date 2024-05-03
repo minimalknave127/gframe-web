@@ -21,31 +21,31 @@ const navItems = [
     href: "/",
     exact: true,
   },
-  {
-    name: "Naše služby",
-    href: "/sluzby",
-    items: [
-      {
-        name: "Inventura a sklady",
-        icon: "/svg/house.svg",
-        href: "/poop",
-      },
-      {
-        name: "Interní objednávky",
-        icon: "/svg/box.svg",
-        href: "/peep",
-      },
-      {
-        name: "Car fleet",
-        icon: "/svg/truck.svg",
-        href: "/paap",
-      },
-    ],
-  },
-  {
-    name: "Kontakt",
-    href: "/pop",
-  },
+  // {
+  //   name: "Naše služby",
+  //   href: "/sluzby",
+  //   items: [
+  //     {
+  //       name: "Inventura a sklady",
+  //       icon: "/svg/house.svg",
+  //       href: "/poop",
+  //     },
+  //     {
+  //       name: "Interní objednávky",
+  //       icon: "/svg/box.svg",
+  //       href: "/peep",
+  //     },
+  //     {
+  //       name: "Car fleet",
+  //       icon: "/svg/truck.svg",
+  //       href: "/paap",
+  //     },
+  //   ],
+  // },
+  // {
+  //   name: "Kontakt",
+  //   href: "/pop",
+  // },
 ];
 
 export default function Nav() {
@@ -60,63 +60,68 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <nav className="sticky top-0 z-50 backdrop-blur-lg bg-white/90 text-black">
+    <nav className="sticky top-0 z-50 backdrop-blur-lg bg-white/90 text-black font-dmsans font-medium">
       <div
         className={cn([
           "flex justify-between items-center md:p-11 md:mb-10 p-7 mb-7 !pb-3 container",
           scrolled && "border-b",
         ])}
       >
-        <div className="hidden xl:flex items-center gap-5">
-          <Link href="/">
+        <div className="flex items-center gap-5">
+          <Link href="/" className="mb-0.5">
             <motion.div
-              initial={{ width: 60, height: 50 }}
-              animate={{ height: scrolled ? 40 : 50 }}
+              initial={{ width: 140 }}
+              animate={{
+                width: scrolled ? 120 : 140,
+                // height: scrolled ? 35 : 50,
+              }}
             >
               <Logo className="w-full h-full" />
             </motion.div>
           </Link>
-          {navItems.map((item, i) => {
-            if (item.items) {
+          <div className="hidden ">
+            {navItems.map((item, i) => {
+              if (item.items) {
+                return (
+                  <DropdownMenu key={i}>
+                    <DropdownMenuTrigger className="focus:outline-none">
+                      {item.name}
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent>
+                      {item.items.map((e, k) => (
+                        <Link key={k} href={e.href}>
+                          <DropdownMenuItem className="cursor-pointer flex gap-2 items-center">
+                            {e.icon && (
+                              <Image
+                                src={e.icon}
+                                alt="item icon"
+                                width={32}
+                                height={32}
+                              />
+                            )}
+                            {e.name}
+                          </DropdownMenuItem>
+                        </Link>
+                      ))}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                );
+              }
               return (
-                <DropdownMenu key={i}>
-                  <DropdownMenuTrigger className="focus:outline-none">
-                    {item.name}
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent>
-                    {item.items.map((e, k) => (
-                      <Link key={k} href={e.href}>
-                        <DropdownMenuItem className="cursor-pointer flex gap-2 items-center">
-                          {e.icon && (
-                            <Image
-                              src={e.icon}
-                              alt="item icon"
-                              width={32}
-                              height={32}
-                            />
-                          )}
-                          {e.name}
-                        </DropdownMenuItem>
-                      </Link>
-                    ))}
-                  </DropdownMenuContent>
-                </DropdownMenu>
+                <Link
+                  key={i}
+                  href={item.href}
+                  className={cn(
+                    ((item.exact && pathname === item.href) ||
+                      (!item.exact && pathname.startsWith(item.href))) &&
+                      "font-semibold"
+                  )}
+                >
+                  {item.name}
+                </Link>
               );
-            }
-            return (
-              <Link
-                key={i}
-                href={item.href}
-                className={cn(
-                  ((item.exact && pathname === item.href) ||
-                    (!item.exact && pathname.startsWith(item.href))) &&
-                    "font-semibold"
-                )}
-              >
-                {item.name}
-              </Link>
-            );
-          })}
+            })}
+          </div>
           {/* <Link href="/" className={cn(pathname === "/" && "font-semibold")}>
             Domů
           </Link>
@@ -153,9 +158,9 @@ export default function Nav() {
           <Link href="/">Kontakt</Link> */}
         </div>
         <div className="flex gap-5 items-center">
-          <Link href="https://app.gframe.app">Přihlásit se</Link>
+          <a href="https://app.gframe.app">Přihlásit se</a>
           <Button asChild>
-            <Link href="/">Registrovat se</Link>
+            <a href="https://app.gframe.app/auth/register">Registrovat se</a>
           </Button>
         </div>
       </div>

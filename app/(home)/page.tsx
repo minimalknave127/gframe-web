@@ -75,7 +75,7 @@ export default function Home() {
           <FeatureTabs />
         </Container>
       </Section>
-      <Section>
+      {/* <Section>
         <div className="md:container px-4">
           <div className="flex bg-stone-100 gap-6 overflow-hidden rounded-3xl items-center md:flex-row flex-col">
             <div className="flex-1 w-full flex flex-col items-start justify-start md:gap-11 gap-7 md:p-16 p-6 md:pe-0">
@@ -142,7 +142,7 @@ export default function Home() {
             </div>
           ))}
         </Container>
-      </Section>
+      </Section> */}
     </main>
   );
 }

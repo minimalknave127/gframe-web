@@ -12,7 +12,7 @@ export default function ConnectSvg() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g id="Frame 5118" clip-path="url(#clip0_481_394)">
+      <g id="Frame 5118" clipPath="url(#clip0_481_394)">
         <g id="Frame 5119">
           <motion.path
             transition={{ duration: 1 }}
@@ -28,7 +28,7 @@ export default function ConnectSvg() {
             d="M139.177 130.563L83.6741 37.2959H191.819L139.177 130.563Z"
             stroke="#94A3B8"
             // stroke="red"
-            stroke-width="4"
+            strokeWidth="4"
           />
           <g id="bg">
             <motion.circle
@@ -46,7 +46,7 @@ export default function ConnectSvg() {
               cy="85.8371"
               r="74.1376"
               fill="#F1F5F9"
-              fill-opacity="0.7"
+              fillOpacity="0.7"
             />
           </g>
           <g id="Group 90">
@@ -73,7 +73,7 @@ export default function ConnectSvg() {
                     r="39.6638"
                     fill="#FAFAF9"
                     stroke="#E7E5E4"
-                    stroke-width="0.72363"
+                    strokeWidth="0.72363"
                   />
                   <g id="Group">
                     <g id="Group_2">
@@ -520,7 +520,7 @@ export default function ConnectSvg() {
                   r="39.6638"
                   fill="#FAFAF9"
                   stroke="#E7E5E4"
-                  stroke-width="0.72363"
+                  strokeWidth="0.72363"
                 />
                 <g id="_x31_7">
                   <g id="Group_61">
@@ -918,7 +918,7 @@ export default function ConnectSvg() {
                   r="39.6638"
                   fill="#FAFAF9"
                   stroke="#E7E5E4"
-                  stroke-width="0.72363"
+                  strokeWidth="0.72363"
                 />
                 <g id="_x36_6">
                   <g id="Group_141">
