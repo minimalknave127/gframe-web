@@ -67,10 +67,14 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <nav className="sticky top-0 z-50 backdrop-blur-lg bg-white/90 text-black font-dmsans font-medium">
+    <nav
+      className={cn([
+        "sticky top-0 z-50 backdrop-blur-lg bg-white/90 text-black font-dmsans font-medium",
+      ])}
+    >
       <div
         className={cn([
-          "flex justify-between items-center md:p-11 md:mb-10 p-7 mb-7 !pb-3 container",
+          "flex justify-between items-center md:p-11 md:mb-10 p-7 mb-7 !pb-3",
           scrolled && "border-b",
         ])}
       >
