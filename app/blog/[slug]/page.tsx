@@ -52,7 +52,7 @@ export default async function BlogDetail({
   return (
     <Container className="max-w-[680px]">
       <div className="flex flex-col gap-10">
-        <h1 className="xl:text-[60px] md:text-4xl text-3xl font-bold">
+        <h1 className="xl:text-[60px] md:text-4xl text-3xl font-bold !leading-[100%]">
           {post.title}
         </h1>
         <div>

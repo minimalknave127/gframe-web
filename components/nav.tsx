@@ -188,12 +188,14 @@ export default function Nav() {
                   return (
                     <li
                       key={i}
-                      className={cn(
-                        [isActive && "text-primary"],
-                        "border-b last:border-none py-2"
-                      )}
+                      className={cn([isActive && "text-primary", "group"])}
                     >
-                      <Link href={item.href}>{item.name}</Link>
+                      <Link
+                        className=" py-2 border-b block group-last:border-none"
+                        href={item.href}
+                      >
+                        {item.name}
+                      </Link>
                     </li>
                   );
                 })}

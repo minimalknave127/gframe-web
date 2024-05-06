@@ -133,11 +133,14 @@ export default function HomeHeader() {
               </Link>
             </Button>
             <Button
+              asChild
               size="lg"
               variant="secondary"
               className="xl:ms-4 mt-4 xl:mt-0 w-full xl:w-auto"
             >
-              Zobrazit ceník
+              <Link href="/blog/gframe-revolucni-system-nyni-zdarma-pro-nove-uzivatele">
+                Zobrazit ceník
+              </Link>
             </Button>
           </div>
         </div>
