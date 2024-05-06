@@ -49,7 +49,7 @@ export const navItems: NavItem[] = [
   {
     name: "Blog",
     href: "/blog",
-    exact: true,
+    exact: false,
   },
   // {
   //   name: "Kontakt",
