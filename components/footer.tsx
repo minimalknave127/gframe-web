@@ -5,6 +5,8 @@ import { Button } from "./ui/button";
 import { UnderlineText } from "./underline-text";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Logo from "@/assets/logo";
+import { navItems } from "./nav";
 
 export default function Footer() {
   return (
@@ -39,14 +41,20 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <Container className="mt-10 mb-10 flex justify-between">
-        <div>logo</div>
-        <div className="flex gap-52">
+      <Container className="mt-10 mb-10 flex flex-col md:flex-row justify-between">
+        <div className="mb-10 md:mb-0">
+          <div className="w-[130px]">
+            <Logo className="w-full h-full" />
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row md:gap-52 gap-3">
           <ul className="font-dmsans font-medium">
             <li className="font-bold">Navigace</li>
-            <li>
-              <Link href="/">Domů</Link>
-            </li>
+            {navItems.map((item, i) => (
+              <li key={i}>
+                <Link href={item.href}>{item.name}</Link>
+              </li>
+            ))}
             {/* <li>Aplikace</li>
             <li>Blog</li>
             <li>Kontakt</li> */}

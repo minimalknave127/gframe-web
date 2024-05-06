@@ -14,50 +14,55 @@ import {
 } from "./ui/dropdown-menu";
 import { usePathname, useRouter } from "next/navigation";
 import { Button } from "./ui/button";
+import BurgerButton from "./burger";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "./ui/sheet";
+import { X } from "lucide-react";
 
 type NavItem = {
   name: string;
   href: string;
   exact?: boolean;
   items?: { name: string; icon?: string; href: string }[];
+  mobileOnly?: boolean;
 };
 
-const navItems: NavItem[] = [
+export const navItems: NavItem[] = [
+  // {
+  //   name: "Přihlásit se",
+  //   href: "https://app.gframe.app",
+  //   exact: true,
+  //   mobileOnly: true,
+  // },
   {
     name: "Domů",
     href: "/",
     exact: true,
+    mobileOnly: true,
+  },
+  {
+    name: "Blog",
+    href: "/blog",
+    exact: true,
   },
   // {
-  //   name: "Naše služby",
-  //   href: "/sluzby",
-  //   items: [
-  //     {
-  //       name: "Inventura a sklady",
-  //       icon: "/svg/house.svg",
-  //       href: "/poop",
-  //     },
-  //     {
-  //       name: "Interní objednávky",
-  //       icon: "/svg/box.svg",
-  //       href: "/peep",
-  //     },
-  //     {
-  //       name: "Car fleet",
-  //       icon: "/svg/truck.svg",
-  //       href: "/paap",
-  //     },
-  //   ],
-  // },
-  // {
   //   name: "Kontakt",
-  //   href: "/pop",
+  //   href: "/kontakt",
+  //   exact: true,
   // },
 ];
 
 export default function Nav() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
+  const [openSheet, setOpenSheet] = useState(false);
+
   useEffect(() => {
     function handleScroll() {
       if (window.scrollY > 15) setScrolled(true);
@@ -66,6 +71,11 @@ export default function Nav() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    setOpenSheet(false);
+  }, [pathname]);
+
   return (
     <nav
       className={cn([
@@ -84,14 +94,14 @@ export default function Nav() {
               initial={{ width: 140 }}
               animate={{
                 width: scrolled ? 120 : 140,
-                // height: scrolled ? 35 : 50,
               }}
             >
               <Logo className="w-full h-full" />
             </motion.div>
           </Link>
-          <div className="hidden ">
+          <div className="md:flex hidden gap-5">
             {navItems.map((item, i) => {
+              if (item.mobileOnly) return null;
               if (item.items) {
                 return (
                   <DropdownMenu key={i}>
@@ -125,7 +135,7 @@ export default function Nav() {
                   className={cn(
                     ((item.exact && pathname === item.href) ||
                       (!item.exact && pathname.startsWith(item.href))) &&
-                      "font-semibold"
+                      "text-primary"
                   )}
                 >
                   {item.name}
@@ -133,42 +143,65 @@ export default function Nav() {
               );
             })}
           </div>
-          {/* <Link href="/" className={cn(pathname === "/" && "font-semibold")}>
-            Domů
-          </Link>
-          <Link href="/">O nás</Link>
-          <DropdownMenu>
-            <DropdownMenuTrigger className="focus:outline-none">
-              Naše služby
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <Link href="https://google.com" prefetch={false} target="_blank">
-                <DropdownMenuItem className="cursor-pointer flex gap-2  items-center">
-                  <Image
-                    src="/svg/house.svg"
-                    alt="item icon"
-                    width={32}
-                    height={32}
-                  />
-                  Inventura a sklady
-                </DropdownMenuItem>
-              </Link>
-              <Link href="/#modules">
-                <DropdownMenuItem className="cursor-pointer flex gap-2 items-center">
-                  <Image
-                    src="/svg/house.svg"
-                    alt="item icon"
-                    width={32}
-                    height={32}
-                  />
-                  Inventura a sklady
-                </DropdownMenuItem>
-              </Link>
-            </DropdownMenuContent>
-          </DropdownMenu>
-          <Link href="/">Kontakt</Link> */}
         </div>
-        <div className="flex gap-5 items-center">
+        {/* Burger menu button */}
+        <Sheet
+          open={openSheet}
+          onOpenChange={() => setOpenSheet((prev) => !prev)}
+        >
+          <SheetTrigger asChild className="focus:outline-none">
+            <button className="flex flex-col gap-2 md:hidden relative z-50 p-2 pe-0">
+              <div className="w-8 h-[3px] rounded-full bg-black"></div>
+              <div className="w-8 h-[3px] rounded-full bg-black"></div>
+            </button>
+          </SheetTrigger>
+          <SheetContent>
+            <div className="flex justify-end  ">
+              <SheetClose asChild className="focus:outline-none">
+                <button className="relative w-10 h-10">
+                  <div className="absolute w-8 h-[3px] rounded-full bg-black transform -translate-x-1/2 left-1/2 rotate-45 top-1/2"></div>
+                  <div className="absolute w-8 h-[3px] rounded-full bg-black transform -translate-x-1/2 left-1/2 -rotate-45 top-1/2"></div>
+                </button>
+              </SheetClose>
+            </div>
+            <div className="mt-5">
+              <div className="flex flex-col gap-2.5 items-start">
+                <Button asChild className="w-full">
+                  <a href="https://app.gframe.app/auth/register">
+                    Registrovat se
+                  </a>
+                </Button>
+                <Button variant="outline" className="w-full">
+                  <a
+                    className="w-full text-center"
+                    href="https://app.gframe.app"
+                  >
+                    Přihlásit se
+                  </a>
+                </Button>
+              </div>
+              <ul className="mt-4 text-lg font-dmsans font-medium flex flex-col  ">
+                {navItems.map((item, i) => {
+                  const isActive =
+                    (item.exact && pathname === item.href) ||
+                    (!item.exact && pathname.startsWith(item.href));
+                  return (
+                    <li
+                      key={i}
+                      className={cn(
+                        [isActive && "text-primary"],
+                        "border-b last:border-none py-2"
+                      )}
+                    >
+                      <Link href={item.href}>{item.name}</Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </SheetContent>
+        </Sheet>
+        <div className="hidden md:flex gap-5 items-center">
           <a href="https://app.gframe.app">Přihlásit se</a>
           <Button asChild>
             <a href="https://app.gframe.app/auth/register">Registrovat se</a>

@@ -2,6 +2,7 @@ import { Container } from "@/components/container";
 import Section from "@/components/section";
 import { client } from "@/lib/sanity";
 import MainPost from "./components/main-post";
+import Post from "./components/post";
 
 export default async function BlogPage() {
   const posts = await client.fetch(
@@ -23,9 +24,11 @@ export default async function BlogPage() {
         </h2>
         <Section className="mt-[40px] md:mt-[80px]">
           {posts.length > 0 ? (
-            <>
-              <MainPost post={posts[0]} />
-            </>
+            <div className="grid gap-10 xl:grid-cols-3 md:grid-cols-2">
+              {posts.map((post, i) => (
+                <Post key={i} post={post} />
+              ))}
+            </div>
           ) : (
             <p className="text-lg">Zatím nemáme žádné příspěvky 😔</p>
           )}
