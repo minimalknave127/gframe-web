@@ -55,16 +55,11 @@ export default function HomeHeader() {
       <Container className="flex items-center flex-col-reverse xl:flex-row gap-10">
         <div className="flex-1">
           <HomeRatingCard className="mb-2 hidden xl:flex" />
-          <h1 className="xl:text-[80px] md:text-7xl text-4xl font-bold">
+          <h1 className="2xl:text-[80px]  md:text-7xl text-4xl font-bold">
             <span className="overflow-hidden relative block">
               <motion.span
                 animate={{
                   y: `${currentIndex * 100}%`,
-                  //   //   y: ["0%", "105%"],
-                  //   y: [
-                  //     "0%",
-                  //     ...content.slice(1).map((_, index) => `${index + 1}05%`),
-                  //   ],
                 }}
                 transition={{
                   repeatDelay: 1,
@@ -146,43 +141,40 @@ export default function HomeHeader() {
         </div>
         <div className="flex-1 flex xl:justify-end justify-center w-[80%] max-h-[70vh]">
           <div className="relative w-full">
-            {content.map((item, index) => {
-              const startingPosition = index * 100;
-              return (
-                <motion.div
-                  className="absolute z-10 w-full h-full"
-                  key={index}
-                  //   style={{ opacity: 0.5 }}
-                  initial={{
-                    // x: `${index === 0 ? 0 : 100}%`,
-                    x: 0,
-                    opacity: index === 0 ? 1 : 0,
-                  }}
-                  animate={{
-                    // x: content.map(
-                    //   (_, index) => `${startingPosition - 100 * index}%`
-                    // ),
-                    // x: `${
-                    //   currentIndex < index ? 30 : currentIndex > index ? -30 : 0
-                    // }%`,
-                    opacity: currentIndex === index ? 1 : 0,
-                  }}
-                  transition={{
-                    repeatDelay: 1,
-                    duration: 1.5,
-                    repeatType: "mirror",
-                    ease: "anticipate",
-                  }}
-                >
-                  <Image
-                    src={`/heros/${1}.png`}
-                    fill
-                    className="object-contain w-full h-full z-10 inset-0"
-                    alt="hero"
-                  />
-                </motion.div>
-              );
-            })}
+            {content.map((item, index) => (
+              <motion.div
+                className="absolute z-10 w-full h-full"
+                key={index}
+                //   style={{ opacity: 0.5 }}
+                initial={{
+                  // x: `${index === 0 ? 0 : 100}%`,
+                  x: 0,
+                  opacity: index === 0 ? 1 : 0,
+                }}
+                animate={{
+                  // x: content.map(
+                  //   (_, index) => `${startingPosition - 100 * index}%`
+                  // ),
+                  // x: `${
+                  //   currentIndex < index ? 30 : currentIndex > index ? -30 : 0
+                  // }%`,
+                  opacity: currentIndex === index ? 1 : 0,
+                }}
+                transition={{
+                  repeatDelay: 1,
+                  duration: 1.5,
+                  repeatType: "mirror",
+                  ease: "anticipate",
+                }}
+              >
+                <Image
+                  src={`/heros/${index + 1}.png`}
+                  fill
+                  className="object-contain w-full h-full z-10 inset-0"
+                  alt="hero"
+                />
+              </motion.div>
+            ))}
             <motion.div
               className="text-primary"
               transition={{
