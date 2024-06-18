@@ -15,7 +15,8 @@ async function getPost(slug: string) {
     { slug: slug },
     {
       next: {
-        revalidate: 1000,
+        // revalidate: 1000,
+        revalidate: 1,
       },
     }
   );

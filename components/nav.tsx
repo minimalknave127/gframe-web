@@ -51,6 +51,11 @@ export const navItems: NavItem[] = [
     href: "/blog",
     exact: false,
   },
+  {
+    name: "Aplikace",
+    href: "/apps",
+    exact: false,
+  },
   // {
   //   name: "Kontakt",
   //   href: "/kontakt",

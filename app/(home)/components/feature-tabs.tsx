@@ -18,8 +18,8 @@ const TABS = [
   {
     title: "Objednávky",
     description:
-      "Spravujte skladové zásoby. Mějte přehled o svém skladovém hospodářství. Hlídejte si převozy mezi sklady a akcemi. Vytvářejte příjemky a externí výdejky.",
-    image: "/features/inventory.png",
+      "Spravujte objednávky a zákazníky, sledujte stav a historii objednávek.",
+    image: "/features/orders.png",
   },
 ];
 
@@ -65,7 +65,7 @@ function Tab({
     <div
       className={cn(
         [
-          "flex md:flex-row flex-col-reverse items-center md:px-10 gap-10 md:gap-0",
+          "flex md:flex-row flex-col-reverse items-center md:px-10 gap-10 md:gap-0 w-full",
         ],
         reversed && "md:flex-row-reverse"
       )}

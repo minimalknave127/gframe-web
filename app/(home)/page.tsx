@@ -41,7 +41,7 @@ export default function Home() {
             />
             <FunctionCard2
               title="Připojení odkudkoliv"
-              description="Aplikace s různými účely spolu chytře komunikují"
+              description="Připojte se odkudkoliv a kdykoliv k systému GFrame"
               image="/svg/home/wifi.svg"
               className="from-red-50 flex-1"
             />
